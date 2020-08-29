@@ -1,0 +1,45 @@
+.header{
+    color: orange;
+}
+body{
+    width: 200px; 
+    height: 90px;
+    background-color: grey;
+}
+#inputBox{
+    margin-left: 10px; 
+    width: 150px;
+}
+#submitForm{
+    display: block;
+}
+#showContent{
+    display: none;
+}
+#save{
+    margin-top: 5px; 
+    margin-left: 36%;
+}
+#viewSavedItem{
+    margin-top: 10px; 
+    margin-bottom: 10px;
+    margin-left: 20%;
+}
+.contentTitle{
+    color: black;
+    float: block;
+    font-size: 10px;
+}
+.copyButton{
+    float: right;
+    border-radius: 50%;
+    font-size: 5px;
+    background-color: #e7e7e7; 
+    color: black;
+}
+.contentDetails{
+    font-size: 8px;
+    text-decoration: none;
+    color: white;
+    display: block;
+}
