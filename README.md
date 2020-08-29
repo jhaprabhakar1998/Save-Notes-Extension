@@ -1,4 +1,4 @@
-# First-Chrome-Extension
+# Save-Notes-Chrome-Extension
 
 # Developer's Note
 
