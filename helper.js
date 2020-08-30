@@ -1,7 +1,8 @@
 window.onload = function () {
+
     document.getElementById("save").onclick = function () {
         const key = document.getElementById("saveTitle").value
-        const value = JSON.stringify(document.getElementById("saveDetails").value)
+        const value = document.getElementById("saveDetails").value
         
         if(key.length !== 0 && value.length !== 0){
             const jsonfile = {};
@@ -25,10 +26,12 @@ window.onload = function () {
             for (let key in data) {
                 let value = data[key]
                 let valueWithoutQuotes = value.replace(/['"]+/g, '')
+                let valueFinal = valueWithoutQuotes; 
+                console.log("valueFinal "+ valueFinal)
                 let h3 = document.createElement("H3"), br = document.createElement("BR")
                 let t3 = document.createTextNode(key)
-                let h4 = document.createElement("H4")
-                let t4 = document.createTextNode(valueWithoutQuotes)
+                let h4 = document.createElement("P")
+                let t4 = document.createTextNode(valueFinal)
                 let copyButton = document.createElement('button');
                 h3.setAttribute("class", "contentTitle")
                 h4.setAttribute("class", "contentDetails")
@@ -36,7 +39,7 @@ window.onload = function () {
                 copyButton.innerHTML = 'Copy';
                 copyButton.onclick = function(){
                     const el = document.createElement('textarea');
-                    el.value = valueWithoutQuotes;
+                    el.value = valueFinal;
                     document.body.appendChild(el);
                     el.select();
                     document.execCommand('copy');
