@@ -42,8 +42,19 @@ window.onload = function () {
                     document.execCommand('copy');
                     document.body.removeChild(el);
                 };
+
+                let deleteButton = document.createElement('button');
+                deleteButton.setAttribute("class", "deleteButton")
+                deleteButton.innerHTML = 'Delete';
+                deleteButton.onclick = function(){
+                    chrome.storage.local.remove(key)
+                    h3.style.display = "none"
+                    h4.style.display = "none"
+                };
+                
                 h3.appendChild(t3)
                 h3.appendChild(copyButton)
+                h3.appendChild(deleteButton)
                 h4.appendChild(t4)
 
                 obj2.appendChild(h3)

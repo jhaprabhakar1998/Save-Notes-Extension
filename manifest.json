@@ -2,13 +2,13 @@
     "manifest_version": 2,
     "name": "Save Notes",
     "description": "Chrome extension for saving small notes locally. All data will be local to your system.",
-    "version": "1.0",
-    "author": "Emad Elmogy",
+    "version": "1.1",
+    "author": "Prabhakar Jha",
     "offline_enabled": true,
     "browser_action": {
         "default_icon": "icon.png",
         "default_popup": "index.html",
-        "default_title": "My custom google Extension"
+        "default_title": "Save Notes Extension"
     },
     "permissions": [
         "activeTab",

@@ -11,6 +11,5 @@ First Download or Clone the Repo and then follow below steps-
 
 To load your extension in Chrome, open up chrome://extensions/ in your browser and click “Developer mode” in the top right. Now click “Load unpacked extension…” and select the extension’s directory. You should now see your extension in the list.
 
-After this you can save your notes by cliking on save button and also view all the saved contents. After clicking on View Submitted Content button you will be seeing all the notes and a copy button on the side of Notes title and on clicking it will copy the text for that title.
+After this you can save your notes by cliking on save button and also view all the saved contents. After clicking on View Submitted Content button you will be seeing all the notes and a copy button and delete button on the side of Notes title and on clicking it will do their mentioned jobs.
 
-Deleting a note will be coming in the next version, for now you can use same title of the note and don't give any values to it.
