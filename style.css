@@ -44,6 +44,13 @@ body{
     background-color: #e7e7e7; 
     color: black;
 }
+#backButton{
+    float: right;
+    border-radius: 50%;
+    font-size: 7px;
+    background-color: #e7e7e7; 
+    color: blue;
+}
 .contentDetails{
     font-size: 8px;
     text-decoration: none;

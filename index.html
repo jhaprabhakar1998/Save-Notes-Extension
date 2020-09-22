@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <title>Save Notes</title>
-        <script src="helper.js"></script>
-        <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
-    <body id ="content">
-        <div id="submitForm">
-            <h2 class="header">Save Info</h2>
-            <div id="inputBox">
-                <h3>Title :</h3><input id="saveTitle" type="text" autofocus/>
-                <h3>Details :</h3><textarea id="saveDetails" type="text" rows="5" cols="21"></textarea>
-            </div>
-            <div>
-                <button id = "save">Save</button>
-            </div>
-            <div>
-                <button id ="viewSavedItem">View Saved Item</button>
-            </div>
+
+<head>
+    <title>Save Notes</title>
+    <script src="helper.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body id="content">
+    <div id="submitForm">
+        <h2 class="header">Save Info</h2>
+        <div id="inputBox">
+            <h3>Title :</h3><input id="saveTitle" type="text" autofocus />
+            <h3>Details :</h3><textarea id="saveDetails" type="text" rows="5" cols="21"></textarea>
         </div>
-        <div id ="showContent">
-            <h2 class="header">View Submitted Contents</h2>
-            
+        <div>
+            <button id="save">Save</button>
         </div>
-    </body>
+        <div>
+            <button id="viewSavedItem">View Saved Item</button>
+        </div>
+    </div>
+    <div id="showContent">
+        <h2 class="header">
+            View Notes
+            <button id="backButton">Back</button>
+        </h2>
+    </div>
+</body>
+
 </html>
