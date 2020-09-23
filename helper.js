@@ -1,5 +1,10 @@
 window.onload = function () {
 
+    function getMonthName(month) {
+        const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+        return monthNames[month]
+    }
+
     function deleteAllChild() {//Delete all the saved notes which are currently in dom except header
         const obj2 = document.getElementById("showContent")
         const childElementsLength = obj2.childElementCount
@@ -20,8 +25,10 @@ window.onload = function () {
         deleteAllChild()
         if (key.length !== 0 && value.length !== 0) {
             const jsonfile = {}
-            jsonfile[key] = value
-
+            const dateTime = new Date();
+            const currDate = dateTime.getDate(), currMonth = getMonthName(dateTime.getMonth()), currYear = dateTime.getFullYear(), currHour = dateTime.getHours(), currMinute = dateTime.getMinutes()
+            const dateString = currDate + " " + currMonth + " " + currYear + ", " + currHour + ":" + currMinute
+            jsonfile[key] = { "value": value, "time": dateString }
             chrome.storage.local.set(jsonfile, function () {
             })
         }
@@ -38,8 +45,9 @@ window.onload = function () {
             const obj2 = document.getElementById("showContent")
 
             for (let key in keyValueJson) {
-                const value = keyValueJson[key].replace(/['"]+/g, '')
-
+                const value = keyValueJson[key]["value"].replace(/['"]+/g, '')
+                const submittedTime = keyValueJson[key]["time"]
+                
                 const h3 = document.createElement("H3")
                 const t3 = document.createTextNode(key)
                 const h4 = document.createElement("P")
