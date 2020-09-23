@@ -1,9 +1,23 @@
 window.onload = function () {
 
+    function deleteAllChild() {//Delete all the saved notes which are currently in dom except header
+        const obj2 = document.getElementById("showContent")
+        const childElementsLength = obj2.childElementCount
+        let i = 0
+        while (i <= childElementsLength) {
+            const lastChildObj2 = obj2.lastChild
+            if (lastChildObj2.className !== "header") {
+                obj2.removeChild(lastChildObj2);
+            }
+            i++
+        }
+        return
+    }
+
     document.getElementById("save").onclick = function () {
         const key = document.getElementById("saveTitle").value
         const value = document.getElementById("saveDetails").value
-
+        deleteAllChild()
         if (key.length !== 0 && value.length !== 0) {
             const jsonfile = {}
             jsonfile[key] = value
@@ -17,9 +31,9 @@ window.onload = function () {
     }
 
     document.getElementById("viewSavedItem").onclick = function () {
+        deleteAllChild()
         chrome.storage.local.get(null, function (items) {
             keyValueJson = JSON.parse(JSON.stringify(items));
-            console.log("keyArr " + JSON.stringify(keyValueJson))
             const obj1 = document.getElementById("submitForm")
             const obj2 = document.getElementById("showContent")
 
@@ -68,5 +82,15 @@ window.onload = function () {
             obj2.style.display = "block"
             obj1.style.display = "none"
         });
+    }
+
+    document.getElementById("backButton").onclick = function () {
+        const obj1 = document.getElementById("submitForm")
+        const obj2 = document.getElementById("showContent")
+        document.getElementById("saveTitle").value = ""
+        document.getElementById("saveDetails").value = ""
+        deleteAllChild()
+        obj2.style.display = "none"
+        obj1.style.display = "block"
     }
 }
