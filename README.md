@@ -9,7 +9,7 @@ Also, know that for local storage there is a limit of 5MB. After that you will b
 
 First Download or Clone the Repo and then follow below steps- 
 
-To load your extension in Chrome, open up (Extension)[chrome://extensions/] in your browser and click “Developer mode” in the top right. Now click “Load unpacked extension…” and select the extension’s directory. You should now see your extension in the list.
+To load your extension in Chrome, open up [Extension](chrome://extensions/) in your browser and click “Developer mode” in the top right. Now click “Load unpacked extension…” and select the extension’s directory. You should now see your extension in the list.
 
 After this you can save your notes by cliking on save button and also view all the saved contents. After clicking on View Submitted Content button you will be seeing all the notes and a copy button and delete button on the side of Notes title and on clicking it will do their mentioned jobs.
 
