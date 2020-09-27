@@ -53,7 +53,10 @@ window.onload = function () {
                 const h4 = document.createElement("P")
                 const t4 = document.createTextNode(value)
                 const copyButton = document.createElement('button');
+                const h6 = document.createElement("P")
+                const t6 = document.createTextNode(submittedTime)
 
+                h6.setAttribute("class", "timeDisplay")
                 h3.setAttribute("class", "contentTitle")
                 h4.setAttribute("class", "contentDetails")
                 copyButton.setAttribute("class", "copyButton")
@@ -75,15 +78,18 @@ window.onload = function () {
                 deleteButton.onclick = function () {
                     chrome.storage.local.remove(key)
                     h3.style.display = "none"
+                    h6.style.display = "none"
                     h4.style.display = "none"
                 };
 
                 h3.appendChild(t3)
                 h3.appendChild(copyButton)
                 h3.appendChild(deleteButton)
+                h6.appendChild(t6)
                 h4.appendChild(t4)
 
                 obj2.appendChild(h3)
+                obj2.appendChild(h6)
                 obj2.appendChild(h4)
             }
 

@@ -54,6 +54,13 @@ body {
     color: black;
 }
 
+.timeDisplay{
+    margin-top: -10px;
+    margin-bottom: 0px;
+    margin-left: 5px;
+    font-size: 0.05em;
+}
+
 #backButton {
     float: right;
     border-radius: 50%;
