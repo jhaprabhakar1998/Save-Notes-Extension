@@ -1,6 +1,6 @@
 {
     "manifest_version": 2,
-    "name": "Save Notes Development",
+    "name": "Save Notes",
     "description": "Chrome extension for saving small notes locally. All data will be local to your system.",
     "version": "1.2",
     "author": "Prabhakar Jha",
