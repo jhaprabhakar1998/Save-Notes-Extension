@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "Save Notes Development",
     "description": "Chrome extension for saving small notes locally. All data will be local to your system.",
-    "version": "1.1",
+    "version": "1.2",
     "author": "Prabhakar Jha",
     "offline_enabled": true,
     "browser_action": {
